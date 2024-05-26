@@ -5,7 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import axios from 'axios';
 import { API_URL } from "../utils";
 
-export const AddTaskForm = () => {
+export const AddTaskForm = ({ fetchTasks }) => {
   const [newTask, setnewTask] = useState("");
 
   const addNewTask = async () => {
@@ -21,7 +21,7 @@ export const AddTaskForm = () => {
       console.log(err);
     }
   };
-  
+
   return (
     <div>
       <Typography align="center" variant="h2" paddingTop={2} paddingBottom={2}>
